@@ -38,4 +38,5 @@ public class Dog extends Animal{
 		System.out.println("The dog runs");
 		super.move(150);
 	}
+	
 }
