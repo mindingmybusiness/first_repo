@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class DescSorting {
-
+	
 	public static void main(String[] args) {
-		int[] test = getIntegers(5);
-		sortIntegers(test);
+		int[] arrayToBe = getIntegers(5);
+		arrayToBe = sortIntegers(arrayToBe);
+		printArray(arrayToBe);
 		
-
 	}
 
 	public static int[] getIntegers(int number) {
@@ -29,27 +29,18 @@ public class DescSorting {
 		}
 	}
 
-	public static void sortIntegers(int[] array) {
-		int[] sortedArray = Arrays.copyOf(array, array.length);
-		for(int j=0;j<array.length;j++)
-		for(int i=0; i< array.length-1;i++) {
-			if(sortedArray[i+1]>sortedArray[i]) {
-				swap(sortedArray[i], sortedArray[i+1]);
-				//System.out.println("The number at" + i + "is greater than number at" + (i+1));
-
+	public static int[] sortIntegers(int[] array) {
+		int[] sortedArray = array;
+		for (int i = 0; i < sortedArray.length; i++) {
+			for (int j = i + 1; j < sortedArray.length; j++) {
+				if (sortedArray[i] < sortedArray[j]) {
+					int temp = sortedArray[i];
+					sortedArray[i] = sortedArray[j];
+					sortedArray[j] = temp;
+				}
 			}
-		
 		}
-		for(int t=0;t<sortedArray.length-1;t++)
-		System.out.println(sortedArray[t]);
-	
-		//return sortedArray;
-	}
-	
-	public static void swap(int a, int b) {
-		int temp = a;
-		a=b;
-		b=temp;
-	}
 
+		return sortedArray;
+	}
 }
