@@ -18,7 +18,7 @@ public class ArrayListsDemo {
 	}
 	
 	public void modifyGroceryItem(int position, String item) {
-		groceryList.set(position, item);
+		groceryList.set(position-1, item);
 	}
 	
 	public void removeGroceryItem(int position) {

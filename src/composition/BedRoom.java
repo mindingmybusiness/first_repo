@@ -29,5 +29,7 @@ public class BedRoom {
 		System.out.println("Bedroom --> Making bed");
 		bed.make();
 	}
+	
+	
 
 }

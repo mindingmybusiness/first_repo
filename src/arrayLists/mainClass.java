@@ -79,7 +79,7 @@ public class mainClass{
 		sc.nextLine();
 		System.out.print("Enter the replacement item: ");
 		String newItem = sc.nextLine();
-		groceryList.modifyGroceryItem(itemNo-1, newItem);
+		groceryList.modifyGroceryItem(itemNo, newItem);
 	}
 
 
