@@ -20,7 +20,7 @@ public class Lamp {
 		return style;
 	}
 
-	public boolean getBattery() {
+	public boolean isBattery() {
 		return battery;
 	}
 
