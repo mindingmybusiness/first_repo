@@ -11,6 +11,8 @@ public class StringMethods {
 //		
 //		comparisonMethods(hello,hi);
 		
+		manipulationMethods();
+		
 	}
 	
 	public static void printStringInformation(String str) {
@@ -50,8 +52,15 @@ public class StringMethods {
 		System.out.println(str1.contentEquals(str));
 	}
 	
-	public static void manipulationMethods(String str) {
+	public static void manipulationMethods() {
+		String birthDate = "17/11/1990";
+		int startingIndex = birthDate.indexOf("1990");
+		System.out.println("Birth Year :" + birthDate.substring(startingIndex));
 		
+		String newDate = String.join("/", "25","11","1990");
+		System.out.println(newDate);
+		
+		System.out.println("ABC\n".repeat(4));
 	}
 	
 
